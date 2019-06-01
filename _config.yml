@@ -1,0 +1,6 @@
+---
+name: 'DevBlog'
+permalink: /:categories/:title
+
+sass:
+  style: compressed
