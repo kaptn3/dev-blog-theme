@@ -1,0 +1,29 @@
+.main-nav {
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    display: block;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1.5rem;
+    opacity: .8;
+    transition: .4s opacity;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  &__logo {
+    font-size: 2rem;
+    opacity: 1;
+  }
+}

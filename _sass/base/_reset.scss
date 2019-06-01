@@ -5,3 +5,13 @@ html {
 body {
   background-color: var(--gray);
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:active,
+  &:visited {
+    color: inherit;
+  }
+}
