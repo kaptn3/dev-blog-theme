@@ -1,10 +1,30 @@
 .sidebar {
-
   &__item {
     background: #fff;
     box-shadow: var(--shadow);
-    padding: 1rem;
-    width: 320px;
+    box-sizing: border-box;
+    padding: 1rem 1.5rem;
+    width: 360px;
     margin-left: 2.5rem;
+    margin-bottom: 2.5rem;
+    font-size: 18px;
+  }
+
+  &__title {
+    font-size: 1.2em;
+    border-bottom: 1px solid var(--gray);
+    margin: -1rem -1.5rem 1rem -1.5rem;
+    padding: 1rem 1.5rem;
+  }
+}
+
+.tlgrm-icon {
+  margin-right: 10px;
+  font-size: 1.5em;
+  color: var(--blue);
+
+  & + a {
+    line-height: 1.5em;
+    vertical-align: text-bottom;
   }
 }
