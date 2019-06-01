@@ -1,0 +1,9 @@
+.sidebar {
+
+  &__item {
+    background: #fff;
+    box-shadow: var(--shadow);
+    padding: 1rem;
+    width: 340px;
+  }
+}

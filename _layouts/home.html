@@ -3,3 +3,14 @@ layout: default
 ---
 
 {%- include header.html -%}
+<main class="main">
+  <div class="container">
+    <div class="main-wrapper">
+      <ul class="post-list">
+        <li>{%- include post.html -%}</li>
+        <li>{%- include post.html -%}</li>
+      </ul>
+      {%- include sidebar.html -%}
+    </div>
+  </div>
+</main>

@@ -1,7 +1,13 @@
 @import 'base/normalize',
         'base/reset',
-        'base/colors';
+        'base/colors',
+        'base/fonts';
 
-@import 'layout/header';
+@import 'layout/header',
+        'layout/container',
+        'layout/sidebar';
 
-@import 'components/avatar';
+@import 'components/avatar',
+        'components/post-list',
+        'components/post',
+        'components/cat-list';
