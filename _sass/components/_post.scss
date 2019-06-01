@@ -1,4 +1,38 @@
 .post {
   background-color: #fff;
   box-shadow: var(--shadow);
+  padding: 1.5rem 4.25rem;
+  font-size: 18px;
+
+  &__title {
+    font-size: 1.5em;
+    line-height: 1.14em;
+    margin-top: 1.14em;
+    margin-bottom: .2em;
+  }
+
+  &__meta {
+    font-size: 16px;
+    opacity: .5;
+    line-height: 2em;
+    margin-bottom: .8em;
+
+    span {
+      margin: 0 6px 0 4px;
+    }
+  }
+
+  &__content {
+    line-height: 32px;
+  }
+
+  &__img {
+    height: 200px;
+    margin: -1.5rem -4.25rem 1.5rem -4.25rem;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 }
