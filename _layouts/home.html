@@ -2,18 +2,11 @@
 layout: default
 ---
 
-{%- include header.html -%}
-<main class="main">
-  <div class="container">
-    <div class="main-wrapper">
-      <ul class="post-list">
-        {%- for post in site.posts -%}
-          <li class="post-list__item">
-            {%- include post.html -%}
-          </li>
-        {%- endfor -%}
-      </ul>
-      {%- include sidebar.html -%}
-    </div>
-  </div>
-</main>
+
+<ul class="post-list">
+  {%- for post in site.posts -%}
+  <li class="post-list__item">
+    {%- include post.html -%}
+  </li>
+  {%- endfor -%}
+</ul>

@@ -4,7 +4,7 @@
     <ul class="cat-list">
       {% for category in site.categories %}
       <li>
-        <a href="category/{{ category[0] }}">
+        <a href="{{ site.url }}/category/{{ category[0] }}">
           {{ category[0] | capitalize }}
         </a>
       </li>
