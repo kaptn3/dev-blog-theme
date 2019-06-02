@@ -35,6 +35,20 @@
 
   &__content {
     line-height: 32px;
+    max-width: 560px;
+    
+    p {
+      //max-width: 560px;
+    }
+
+    a {
+      color: var(--blue);
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
   }
 
   &__img {

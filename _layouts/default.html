@@ -24,6 +24,10 @@
   </main>
 
   {%- include footer.html -%}
+
+  {%- if page.layout == 'post' -%}
+    <script src="/assets/js/contents.js"></script>
+  {%- endif -%}
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 ---
 layout: category
-title: Codacademy
-category: codacademy
+title: Codecademy
+category: codecademy
 ---
