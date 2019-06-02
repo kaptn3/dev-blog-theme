@@ -10,3 +10,13 @@
     justify-content: center;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 0 2rem;
+    
+    &__nav {
+      margin: 0 -.7rem;
+    }
+  }
+}

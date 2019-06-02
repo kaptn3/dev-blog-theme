@@ -4,9 +4,11 @@
   cursor: pointer;
   justify-content: center;
   align-items: center;
-  width: 80px;
+  width: 4rem;
   height: 100vh;
   font-size: 2rem;
+  transition: .2s background-color;
+  z-index: 2;
 
   &:hover,
   &:focus {
@@ -14,7 +16,20 @@
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 1244px) {
+  .scroll-up-btn {
+    max-width: calc(100vw - 1172px + 1.5rem);
+  }
+}
+
+@media screen and (max-width: 1172px) {
+  .scroll-up-btn {
+    max-width: 2rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .scroll-up-btn {
     display: none;
   }

@@ -1,14 +1,16 @@
 <header class="header">
   <div class="container">
-    <nav class="header__nav">
+    <nav class="header__nav main-nav">
+      <a class="main-nav__item main-nav__logo" href="{{ site.url }}">&lt;DevBlog/&gt;</a>
+      <button class="main-nav__btn">
+        <i class="fas fa-bars"></i>
+      </button>
+
       <ul class="main-nav__list">
-        <li>
-          <a class="main-nav__item main-nav__logo" href="{{ site.url }}">&lt;DevBlog/&gt;</a>
-        </li>
         {%- for item in site.data.navigation.main -%}
-          <li>
-            <a href="{{ item.link }}" class="main-nav__item">{{ item.name }}</a>
-          </li>
+        <li>
+          <a href="{{ item.link }}" class="main-nav__item">{{ item.name }}</a>
+        </li>
         {%- endfor -%}
       </ul>
     </nav>

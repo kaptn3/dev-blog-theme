@@ -2,10 +2,10 @@
   background-color: #fff;
   box-shadow: var(--shadow);
   padding: 1.5rem 3.75rem;
-  font-size: 18px;
   width: 100%;
   box-sizing: border-box;
   overflow: hidden;
+  min-width: calc(560px + 4rem);
 
   &__title {
     font-size: 1.5em;
@@ -35,10 +35,15 @@
 
   &__content {
     line-height: 32px;
-    max-width: 560px;
-    
-    p {
-      //max-width: 560px;
+    max-width: 100%;
+     
+    #contents ol {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .contents-hr {
+      color: var(--blue);
     }
 
     a {
@@ -70,5 +75,25 @@
         transform: scale(1.2);
       }
     }
+  }
+}
+
+@media screen and (max-width: 1171px) {
+  .post {
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    min-width: initial;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .post {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .post {
+    padding: 1rem 1.5rem;
   }
 }

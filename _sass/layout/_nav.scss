@@ -1,18 +1,19 @@
 .main-nav {
+  display: flex;
+  color: #fff;
+
   &__list {
     list-style: none;
     padding: 0;
     margin: 0;
-    color: #fff;
     display: flex;
     align-items: center;
   }
 
   &__item {
     display: block;
-    color: #fff;
     padding: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     opacity: .8;
     transition: .4s opacity;
 
@@ -26,5 +27,58 @@
   &__logo {
     font-size: 2rem;
     opacity: 1;
+  }
+
+  &__btn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-nav {
+    &__item {
+      font-size: 1rem;
+      padding: .7rem;
+    }
+
+    &__logo {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .main-nav {
+    &__list {
+      display: none;
+      position: absolute;
+      z-index: 100;
+      top: 49px;
+      background: #B6B6FF;
+      left: -2rem;
+      right: -2rem;
+      color: #222;
+      padding: .7rem 1.3rem;
+
+      &_opened {
+        display: block;
+      }
+    }
+
+    &__btn {
+      font-size: 1.5rem;
+      color: #fff;
+      opacity: .8;
+      margin-left: auto;
+      display: block;
+      background: transparent;
+      border: none;
+      outline: none;
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
+    }
   }
 }

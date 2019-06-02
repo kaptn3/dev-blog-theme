@@ -37,3 +37,9 @@
     padding: 0 1em;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .pagination {
+    margin: 0 1rem;
+  }
+}
