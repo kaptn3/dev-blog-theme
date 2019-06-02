@@ -1,0 +1,16 @@
+{
+  "main": [
+    {
+      "link": "/category/life",
+      "name": "Life"
+    },
+    {
+      "link": "/category/codecademy",
+      "name": "Codecademy"
+    },
+    {
+      "link": "/category/javascript",
+      "name": "Javascript"
+    }
+  ]
+}

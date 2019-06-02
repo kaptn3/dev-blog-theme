@@ -5,12 +5,11 @@
         <li>
           <a class="main-nav__item main-nav__logo" href="#">&lt;DevBlog/&gt;</a>
         </li>
-        <li>
-          <a class="main-nav__item" href="#">Item</a>
-        </li>
-        <li>
-          <a class="main-nav__item" href="#">Item</a>
-        </li>
+        {%- for item in site.data.navigation.main -%}
+          <li>
+            <a href="{{ item.link }}" class="main-nav__item">{{ item.name }}</a>
+          </li>
+        {%- endfor -%}
       </ul>
     </nav>
   </div>
