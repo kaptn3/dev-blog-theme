@@ -2,7 +2,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
 
-title: 'DevBlog'
+title: 'DevBlog - блог о веб-разработке'
 url: "https://blog.kaptn.ru"
 color: "#6767F6"
 permalink: /:categories/:title
