@@ -1,8 +1,11 @@
 .post {
   background-color: #fff;
   box-shadow: var(--shadow);
-  padding: 1.5rem 4.25rem;
+  padding: 1.5rem 3.75rem;
   font-size: 18px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 
   &__title {
     font-size: 1.5em;
@@ -35,7 +38,7 @@
   &__img {
     display: block;
     height: 200px;
-    margin: -1.5rem -4.25rem 1.5rem -4.25rem;
+    margin: -1.5rem -3.75rem 1.5rem -3.75rem;
     overflow: hidden;
     background-image: var(--gradient);
 

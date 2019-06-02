@@ -30,3 +30,12 @@
 .main-wrapper {
   display: flex;
 }
+
+#contents ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contents-hr {
+  color: var(--blue);
+}

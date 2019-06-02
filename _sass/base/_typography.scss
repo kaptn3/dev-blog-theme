@@ -1,0 +1,97 @@
+html {
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 1.94em;
+  line-height: 1.82em;
+  margin-top: 0.91em;
+  margin-bottom: 1.82em;
+}
+h2 {
+  font-size: 1.55em;
+  line-height: 1.14em;
+  margin-top: 1.14em;
+  margin-bottom: 1.14em;
+}
+h3 {
+  font-size: 1.22em;
+  line-height: 1.45em;
+  margin-top: 1.45em;
+  margin-bottom: 0em;
+}
+
+h4 {
+  font-size: 1em;
+  line-height: 1.78em;
+  margin-top: 1.78em;
+  margin-bottom: 0em;
+}
+
+h5 {
+  font-size: 1em;
+  line-height: 1.78em;
+  margin-top: 1.78em;
+  margin-bottom: 0em;
+}
+
+p,
+ul,
+ol,
+pre,
+table,
+blockquote {
+  margin-top: 0em;
+  margin-bottom: 1.78em;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+hr {
+  border: 1px solid;
+  margin: -1px 0;
+}
+
+b,
+i,
+strong,
+em,
+small,
+code {
+  line-height: 0;
+}
+
+sub,
+sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+pre {
+  overflow: auto;
+}
