@@ -15,7 +15,11 @@
   {% if paginator.next_page %}
   <link rel="next" href="{{ site.url }}{{ paginator.next_page_path }}">
   {% endif %}
-  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  {%- if page.layout == home -%}
+    <link rel="canonical" href="{{ site.url }}">
+  {%- elseif page.layout != home -%}
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  {%- endif -%}
   <link rel="stylesheet" href="/assets/css/style.css">
   <script defer src="/assets/js/all.js"></script>
   <title>{{ page.title }} | {{ site.title }}</title>
