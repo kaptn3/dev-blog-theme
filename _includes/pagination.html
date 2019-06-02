@@ -1,0 +1,25 @@
+<div class="pagination">
+  {% if paginator.previous_page %}
+  <a href="{{ paginator.previous_page_path }}" class="pagination__item pagination__nav">
+    Туда
+  </a>
+  {% endif %}
+  <ul class="pagination__list">
+      {% if paginator.previous_page %}
+    <li>
+      <a class="pagination__item" href="{{ paginator.previous_page_path }}">{{ paginator.previous_page }}</a>
+    </li>
+    {% endif %}
+    <li>
+      <a class="pagination__item" disabled>{{ paginator.page }}</a>
+    </li>
+    {% if paginator.next_page %}
+    <li>
+        <a class="pagination__item" href="{{ paginator.next_page_path }}">{{ paginator.next_page }}</a>
+      </li>
+      {% endif %}
+  </ul>
+  {% if paginator.next_page %}
+  <a href="{{ paginator.next_page_path }}" class="pagination__item pagination__nav">Сюда</a>
+  {% endif %}
+</div>

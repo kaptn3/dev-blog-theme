@@ -1,0 +1,18 @@
+@import 'base/normalize',
+        'base/reset',
+        'base/colors',
+        'base/fonts',
+        'base/typography';
+
+@import 'layout/header',
+        'layout/container',
+        'layout/sidebar',
+        'layout/nav',
+        'layout/footer';
+
+@import 'components/avatar',
+        'components/post-list',
+        'components/post',
+        'components/cat-list',
+        'components/scroll-up',
+        'components/pagination';

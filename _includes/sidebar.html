@@ -1,0 +1,21 @@
+<aside class="sidebar">
+  <nav class="sidebar__item">
+    <h3 class="sidebar__title">Категории</h3>
+    <ul class="cat-list">
+      {% for category in site.categories %}
+      <li>
+        <a href="{{ site.url }}/category/{{ category[0] }}">
+          {{ category[0] | capitalize }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+  <div class="sidebar__item">
+    <h3 class="sidebar__title">Канал в Телеграме</h3>
+    <span class="tlgrm-icon">
+      <i class="fab fa-telegram"></i>
+    </span>
+    <a href="{{ site.socials.tlgrm }}">Подписывайся</a>
+  </div>
+</aside>

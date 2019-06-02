@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<article class="post">
+  <div class="post__img">
+    {%- if page.image -%}
+    <img src="/img/{{ page.image }}" alt="Картинка статьи">
+    {%- endif -%}
+  </div>
+  <h1 class="post__title">
+    {{ page.title }}
+  </h1>
+  <div class="post__meta">
+    <i class="fas fa-calendar-day"></i>
+    <span>{{ page.date | date: '%d.%m.%Y в %H:%M' }},</span>
+    <i class="fas fa-key"></i>
+    <span><a href="{{ site.url }}/category/{{ page.category }}">{{ page.category | capitalize }}</a></span>
+  </div>
+  <div class="post__content">
+    {{ page.content }}
+  </div>
+</article>
