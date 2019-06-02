@@ -1,8 +1,10 @@
 plugins:
   - jekyll-paginate
+  - jekyll-sitemap
 
 title: 'DevBlog'
 url: "http://80.211.62.213"
+color: "#6767F6"
 permalink: /:categories/:title
 
 sass:
@@ -11,7 +13,7 @@ sass:
 excerpt_separator: <!--more-->
 
 paginate: 5
-paginate_path: '/page-:num/'
+paginate_path: '/page/:num/'
 
 socials:
   github: 'kaptn3'
