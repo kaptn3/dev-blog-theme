@@ -1,7 +1,7 @@
 plugins:
   - jekyll-paginate
 
-name: 'DevBlog'
+title: 'DevBlog'
 url: "http://80.211.62.213"
 permalink: /:categories/:title
 
