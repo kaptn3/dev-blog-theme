@@ -1,6 +1,14 @@
----
+plugins:
+  - jekyll-paginate
+
 name: 'DevBlog'
+url: "http://80.211.62.213"
 permalink: /:categories/:title
 
 sass:
   style: compressed
+
+excerpt_separator: <!--more-->
+
+paginate: 5
+paginate_path: '/page-:num/'
