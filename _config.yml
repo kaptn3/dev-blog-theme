@@ -12,3 +12,7 @@ excerpt_separator: <!--more-->
 
 paginate: 5
 paginate_path: '/page-:num/'
+
+socials:
+  github: 'kaptn3'
+  tlgrm: 'https://t.me/vikablog'
