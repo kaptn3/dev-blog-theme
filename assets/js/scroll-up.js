@@ -2,14 +2,14 @@ const scrollUp = () => {
   document.documentElement.scrollTop = 0;
 }
 
-document.addEventListener('scroll', () => {
-  let btn = document.querySelector('.scroll-up-btn');
+let btn = document.querySelector('.scroll-up-btn');
 
-  if (document.documentElement.scrollTop > 500) {
+document.addEventListener('scroll', () => {
+  if (document.documentElement.scrollTop > 500 && document.body.offsetWidth > 768) {
     btn.style.display = 'flex';
   } else {
     btn.style.display = 'none';
   }
 });
 
-document.addEventListener('click', scrollUp);
+btn.addEventListener('click', scrollUp);
