@@ -2,16 +2,13 @@
   <nav class="sidebar__item">
     <h3 class="sidebar__title">Категории</h3>
     <ul class="cat-list">
+      {% for category in site.categories %}
       <li>
-        <a href="#">
-          Category
+        <a href="category/{{ category[0] }}">
+          {{ category[0] | capitalize }}
         </a>
-        </li>
-      <li>
-        <a href="#">
-          Category
-        </a>
-        </li>
+      </li>
+      {% endfor %}
     </ul>
   </nav>
   <div class="sidebar__item">
@@ -19,6 +16,6 @@
     <span class="tlgrm-icon">
       <i class="fab fa-telegram"></i>
     </span>
-      <a href="#">Подписывайся</a>
+    <a href="#">Подписывайся</a>
   </div>
 </aside>

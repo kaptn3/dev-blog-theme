@@ -1,18 +1,19 @@
 <article class="post">
-  <a href="#" class="post__img">
-    <img
-      src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
-      alt="Post image">
+  <a href="{{ post.url }}" class="post__img">
+    {%- if post.image -%}
+      <img src="{{ post.image }}" alt="Картинка статьи">
+    {%- endif -%}
   </a>
-  <h2 class="post__title"><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus soluta
-      perspiciatis</a></h2>
+  <h2 class="post__title">
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  </h2>
   <div class="post__meta">
     <i class="fas fa-calendar-day"></i>
-    <span>19 сентября 2018 в 20:14,</span>
+    <span>{{ post.date | date: '%d.%m.%Y в %H:%M' }},</span>
     <i class="fas fa-key"></i>
-    <span>Переводы</span>
+    <span><a href="{{ post.category }}">{{ post.category | capitalize }}</a></span>
   </div>
-  <p class="post__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus soluta perspiciatis
-    deleniti cumque veniam error numquam nam quidem a rerum molestias ut ad, adipisci culpa maiores quaerat voluptatum
-    vel necessitatibus.</p>
+  <div class="post__content">
+    {{ post.excerpt }}
+  </div>
 </article>
