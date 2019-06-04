@@ -1,6 +1,7 @@
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 title: 'DevBlog - блог о веб-разработке'
 url: "https://blog.kaptn.ru"
@@ -18,3 +19,4 @@ paginate_path: '/page/:num/'
 socials:
   github: 'kaptn3'
   tlgrm: 'https://t.me/vikablog'
+  disqus: 'devblog-9'
