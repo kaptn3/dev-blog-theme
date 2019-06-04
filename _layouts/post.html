@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-
+<div>
 <article class="post">
   <div class="post__img">
     {%- if page.image -%}
@@ -21,3 +21,9 @@ layout: default
     {{ page.content }}
   </div>
 </article>
+
+
+  <section class="user-comments">
+    {%- include disqus.html -%}
+  </section>
+</div>

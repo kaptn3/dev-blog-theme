@@ -1,0 +1,18 @@
+.user-comments {
+  box-shadow: var(--shadow);
+  margin-top: 2.5rem;
+  background-color: #fff;
+  padding: 1rem 1.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .user-comments {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .user-comments {
+    margin-top: 0;
+  }
+}
