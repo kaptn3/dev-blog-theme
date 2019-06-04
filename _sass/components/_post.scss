@@ -2,10 +2,10 @@
   background-color: #fff;
   box-shadow: var(--shadow);
   padding: 1.5rem 3.75rem;
-  width: 100%;
   box-sizing: border-box;
   overflow: hidden;
-  min-width: calc(560px + 4rem);
+  flex-shrink: 0;
+  width: calc(560px + 7.5rem);
 
   &__title {
     font-size: 1.5em;
@@ -82,7 +82,13 @@
   .post {
     padding: 1.5rem 2rem;
     margin-bottom: 2rem;
-    min-width: initial;
+    width: calc(560px + 4rem);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .post {
+    width: 100%;
   }
 }
 
