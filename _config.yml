@@ -3,7 +3,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
 
-title: 'DevBlog - блог о веб-разработке'
+title: 'Kapiko - блог о веб-разработке'
 url: "https://blog.kaptn.ru"
 color: "#6767F6"
 permalink: /:categories/:title
@@ -18,5 +18,5 @@ paginate_path: '/page/:num/'
 
 socials:
   github: 'kaptn3'
-  tlgrm: 'https://t.me/vikablog'
+  tlgrm: 'https://t.me/kapiko_blog'
   disqus: 'devblog-9'
