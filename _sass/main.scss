@@ -1,14 +1,16 @@
-@import 'base/normalize',
-        'base/reset',
+@import 'vendors/solarized',
+        'vendors/normalize';
+
+@import 'base/reset',
         'base/colors',
         'base/fonts',
         'base/typography';
 
-@import 'layout/header',
-        'layout/container',
-        'layout/sidebar',
-        'layout/nav',
-        'layout/footer';
+@import 'layouts/header',
+        'layouts/container',
+        'layouts/sidebar',
+        'layouts/nav',
+        'layouts/footer';
 
 @import 'components/avatar',
         'components/post-list',
