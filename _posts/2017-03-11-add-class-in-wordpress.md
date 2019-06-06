@@ -6,9 +6,10 @@ category: life
 tags: [wordpress, картинки, классы]
 ---
 <!--more-->
-В WordPress картинки, которые добавляются редактором в статью, вставляются без классов. Чтобы это исправить мы напишем функцию, которая к каждой картинке добавит класс, например, <code>.img-responsive</code>. В файл <code>function.php</code>, который находится в папке <code>wp-content</code>, нужно прописать следующее:
+В WordPress картинки, которые добавляются редактором в статью, вставляются без классов. Чтобы это исправить мы напишем функцию, которая к каждой картинке добавит класс, например, `.img-responsive`. В файл `function.php`, который находится в папке `wp-content`, нужно прописать следующее:
 
-<pre><code>images class
+```php
+images class
 function add_image_responsive_class($content) {
    global $post;
    $pattern ="/<img(.*?)class=\"(.*?)\"(.*?)>/i";
@@ -16,4 +17,5 @@ function add_image_responsive_class($content) {
    $content = preg_replace($pattern, $replacement, $content);
    return $content;
 }
-add_filter('the_content', 'add_image_responsive_class');</code></pre>
+add_filter('the_content', 'add_image_responsive_class');
+```

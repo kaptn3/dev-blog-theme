@@ -170,16 +170,18 @@ pre {
   }
 }
 
-kbd {
-  font-size: 16px;
+code.highlighter-rouge,
+pre.highlight {
+  font-size: .85rem;
+  background-color: #f4f4fe;
+  border-radius: 3px;
+}
+
+code.highlighter-rouge {
+  padding: .2em .4em;
 }
 
 pre.highlight {
-  font-size: 14px;
   padding: .4em 1em;
-  background-color: #f4f4fe;
-}
-
-.highlighter-rouge {
-  margin-top: -1.4rem;
+  margin-top: -1.2rem;
 }
