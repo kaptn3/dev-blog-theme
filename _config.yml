@@ -16,7 +16,21 @@ excerpt_separator: <!--more-->
 paginate: 5
 paginate_path: '/page/:num/'
 
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+highlighter: rouge
+
 socials:
   github: 'kaptn3'
   tlgrm: 'https://t.me/kapiko_blog'
   disqus: 'devblog-9'
+
+exclude: 
+  - Gemfile
+  - Gemfile.lock
+  - CNAME
+  - .gitignore

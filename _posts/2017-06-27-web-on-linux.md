@@ -7,42 +7,67 @@ tags: [linux, web-разработка, web, программы]
 image: 9.jpg
 ---
 <!--more-->
+
 ## Небольшое примечание
-Перед каждой установкой программы желательно обновлять пакеты:  
-`sudo apt-get update`
+
+Перед каждой установкой программы желательно обновлять пакеты: 
+
+```bash
+sudo apt-get update
+```
+
 ## Редакторы
+
 - Установим два редактора:  
 Visual Studio Code:  
-```
+
+```bash
 sudo apt-get install ubuntu-make 
 umake ide visual-studio-code
-```  
-... и Sublime Text:    
 ```
+
+... и Sublime Text:
+
+```bash
 sudo add-apt-repository ppa:webupd8team/sublime-text-3  
 sudo apt-get install sublime-text-installer
 ```
 
 ## Git
+
 - Устанавливаем git, если не установлен и генирируем ssh-ключ для работы с репозиторием:  
-```
+
+```bash
 ssh-keygen -t rsa -b 4096  
 cat ~/.ssh/id_rsa.pub
 ```
+
 Ключ копируем и вставляем [сюда](https://github.com/settings/keys).  
 И запускаем ssh-agent:  
-`eval "$(ssh-agent -s)"`  
+```bash
+eval "$(ssh-agent -s)"
+```
+
 Теперь можно работать с репозиториями.
 
 ## Сервер
+
 Для сервера будем использовать стек LEMP (Linux, Nginx, MySQL и PHP).
-- Установим Nginx:  
-`sudo apt-get install nginx`  
+- Установим Nginx:
+
+```bash
+sudo apt-get install nginx
+```
+
 Запускается он автоматически, поэтому зайдя на [localhost](//localhost) вы увидете страницу от Nginx.  
 По умолчанию сайты находятся в папке /usr/share/nginx/html. Если нужно поменять путь, то в файле конфигурации, /etc/nginx/sites-available/default.conf, нужно найти и изменить строчку: `root /usr/share/nginx/html;` на нужный нам путь.
-- Установим MySQL:  
-`sudo apt-get install mysql-server`
-- Установим PHP:  
+- Установим MySQL:
+
+```bash
+sudo apt-get install mysql-server
+```
+
+- Установим PHP:
 `sudo apt-get install php php-cli php-fpm php-mysql`  
 Теперь нам необходимо изменить одну из настроек в файле конфигурации PHP, для чего откроем файл "php.ini"
 Находим параметр "cgi.fix_pathinfo", убираем символ комментария в начале строки (";") и установливаем значение параметра 0, чтобы в результате получилось:  
@@ -50,15 +75,18 @@ cat ~/.ssh/id_rsa.pub
 Перезапускаем процесс PHP:  
 `sudo systemctl restart php7.0-fpm`  
 - Настроим Nginx для работы с PHP:  
-Добавим в директиву "index" значение "index.php" первым в списке (чтобы PHP файлы имели приоритет в обработке веб-сервером перед HTML):  
-```
+Добавим в директиву "index" значение "index.php" первым в списке (чтобы PHP файлы имели приоритет в обработке веб-сервером перед HTML):
+
+```bash
 root /var/www/html;
 index index.php index.html index.htm index.nginx-debian.html;
 ```
+
 Установим директиву "server_name" в значение IP адреса или доменного имени нашего сервера:  
 `server_name server_domain_or_IP;`
 Раскомментировать секцию, которая описывает настройки обработки PHP и блок location для файлов .htaccess. Сервер Nginx не обрабатывает эти файлы; если один из этих файлов попадёт в document root, его нельзя отображать клиентам. Вот, что должно получиться в итоге:  
-```
+
+```bash
 location ~ \.php$ {
     include snippets/fastcgi-php.conf;
     fastcgi_pass unix:/run/php/php7.0-fpm.sock;
@@ -67,10 +95,12 @@ location ~ /\.ht {
     deny all;
 }
 ```
+
 После проверим файл на наличии ошибок:  
 `nginx -t`  
 и перезагрузим nginx:  
 `nginx -s reload`
+
 - Тестирование  
 В папке для сайтов создаём php-файл со строкой:  
 `<?php phpinfo();`  
@@ -88,22 +118,27 @@ location ~ /\.ht {
 Сбрасываем привилегии:  
 `FLUSH PRIVILEGES;`  
 Далее скачиваем WordPress и помещаем его в папке сайта. В файле wp-config.php изменяем параметры MySQL на только что настроенные:  
-```
+
+```php
 define('DB_NAME', 'wordpress');
 define('DB_USER', 'user');
 define('DB_PASSWORD', 'testpass');
 define('DB_HOST', 'localhost');
 ```
+
 Открываем в браузере wp-activate.php и следуем по инструкции.
 
 ## Sass
+
 - Установим Ruby, а далее и Sass:  
-```
+
+```bash
 sudo apt-get install ruby
 sudo gem install sass
 ```
 
-## Gulp 
+## Gulp
+
 - Для начала нужно устрановить node.js:  
 `sudo apt-get install nodejs`  
 На всякий случай, можно проверить версию:  
@@ -119,16 +154,19 @@ sudo gem install sass
 `nmp init`  
 Настройки проекта будут находиться в файле package.json  
 - Проверяем работу. В файле gulpfile.js пишем следующий код:  
-```
+
+```javascript
 gulp.task('hello', function() {
     console.log('Hello, World!');
 });
 ```
+
 И в терминале запускаем его:  
 `gulp hello`  
 В результате должны увидеть фразу "Hello, World!".
 
 ## Jekyll
+
 - Устанавливаем павкет ruby и ruby-dev для разработки:  
 `sudo apt-get install ruby ruby-dev`  
 - Далее устанавливаем Jekyll и Bundler:  
@@ -141,7 +179,9 @@ gulp.task('hello', function() {
 - И также переходим в папку "название_проекта" и запускаем сервер.
 
 ## React JS
+
 Для работы с реактом, должны быть [установлены](#gulp) NodeJS и npm
+
 - Установим create-react-app:  
 `sudo npm install -g create-react-app`  
 - Инициализируем проект:  
