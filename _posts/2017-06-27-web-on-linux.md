@@ -42,7 +42,7 @@ ssh-keygen -t rsa -b 4096
 cat ~/.ssh/id_rsa.pub
 ```
 
-Ключ копируем и вставляем [сюда](https://github.com/settings/keys).  
+Ключ копируем и вставляем [сюда](https://github.com/settings/keys){:rel="nofollow"}.  
 И запускаем ssh-agent:  
 ```bash
 eval "$(ssh-agent -s)"
@@ -59,7 +59,7 @@ eval "$(ssh-agent -s)"
 sudo apt-get install nginx
 ```
 
-Запускается он автоматически, поэтому зайдя на [localhost](//localhost) вы увидете страницу от Nginx.  
+Запускается он автоматически, поэтому зайдя на [localhost](//localhost){:rel="nofollow"} вы увидете страницу от Nginx.  
 По умолчанию сайты находятся в папке /usr/share/nginx/html. Если нужно поменять путь, то в файле конфигурации, /etc/nginx/sites-available/default.conf, нужно найти и изменить строчку: `root /usr/share/nginx/html;` на нужный нам путь.
 - Установим MySQL:
 
@@ -173,7 +173,7 @@ gulp.task('hello', function() {
 `sudo gem install jekyll bundler`  
 - Переходим в папку с готовым Jekyll-сайтом и запускаем сервер:  
 `bundle exec jekyll serve`  
-- И переходим на [localhost:4000](//localhost:4000).  
+- И переходим на [localhost:4000](//localhost:4000){:rel="nofollow"}.  
 - Если нужно начать новый проект, то используем команду:  
 `jekyll new название_проекта`   
 - И также переходим в папку "название_проекта" и запускаем сервер.
@@ -188,4 +188,4 @@ gulp.task('hello', function() {
 `create-react-app my-app`  
 - Переходим в папку my-app и запускаем проект в режиме разработки:  
 `npm start`  
-Суть в том, что страница [localhost:3000](//localhost:3000) будет перезагружаться как только будут произведены какие-либо изменения в файлах.
+Суть в том, что страница [localhost:3000](//localhost:3000){:rel="nofollow"} будет перезагружаться как только будут произведены какие-либо изменения в файлах.
