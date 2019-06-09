@@ -8,7 +8,10 @@
   <meta property="og:title" content="{{ page.title }}">
   <meta property="og:image" content="{{ site.url }}/img/{{ page.image }}">
   <meta property="og:site_name" content="{{ site.title }}">
-  <!--meta property="og:description" content="This article will talk about tags"-->
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% elsif page.layout == 'post' %}{{ page.content | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  {% if page.date %}
+  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+  {% endif %}
 
   {% if paginator.previous_page %}
   <link rel="prev" href="{{ site.url }}{{ paginator.previous_page_path }}">
@@ -21,7 +24,7 @@
   {%- elsif page.layout != home -%}
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
   {%- endif -%}
+
   <link rel="stylesheet" href="/assets/css/style.css">
-  <script defer src="/assets/js/all.js"></script>
   <title>{{ page.title }} | {{ site.title }}</title>
 </head>
