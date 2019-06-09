@@ -6,7 +6,7 @@ plugins:
 title: 'Kapiko - блог о веб-разработке'
 url: "https://blog.kaptn.ru"
 color: "#6767F6"
-permalink: /:categories/:title
+permalink: /:categories/:year/:title
 
 sass:
   style: compressed
