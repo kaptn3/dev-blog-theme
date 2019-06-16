@@ -12,5 +12,19 @@
       "link": "/category/javascript",
       "name": "Javascript"
     }
+  ],
+  "category": [
+    {
+      "link": "life",
+      "name": "Life"
+    },
+    {
+      "link": "codecademy",
+      "name": "Codecademy"
+    },
+    {
+      "link": "administration",
+      "name": "Администрирование"
+    }
   ]
 }

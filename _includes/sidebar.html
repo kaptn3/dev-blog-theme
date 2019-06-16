@@ -2,10 +2,10 @@
   <nav class="sidebar__item">
     <h3 class="sidebar__title">Категории</h3>
     <ul class="cat-list">
-      {% for category in site.categories %}
+      {%- for cat in site.data.navigation.category -%}
       <li>
-        <a href="{{ site.url }}/category/{{ category[0] }}">
-          {{ category[0] | capitalize }}
+        <a href="{{ site.url }}/category/{{ cat.link }}">
+          {{ cat.name }}
         </a>
       </li>
       {% endfor %}

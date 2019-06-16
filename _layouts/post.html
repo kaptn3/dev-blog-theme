@@ -5,7 +5,7 @@ layout: default
 <article class="post">
   <div class="post__img">
     {%- if page.image -%}
-    <img src="/img/{{ page.image }}" alt="Картинка статьи">
+    <img src="{{ site.url }}/img/{{ page.image }}" alt="Изображение статьи" title="Изображение статьи">
     {%- endif -%}
   </div>
   <h1 class="post__title">
@@ -15,7 +15,11 @@ layout: default
     <i class="fas fa-calendar-day"></i>
     <span>{{ page.date | date: '%d.%m.%Y в %H:%M' }},</span>
     <i class="fas fa-key"></i>
-    <span><a href="{{ site.url }}/category/{{ page.category }}">{{ page.category | capitalize }}</a></span>
+    {%- for cat in site.data.navigation.category -%}
+      {%- if cat.link == page.category -%}
+        <span><a href="{{ site.url }}/category/{{ page.category }}">{{ cat.name }}</a></span>
+      {%- endif -%}
+    {%- endfor -%}
   </div>
   <div class="post__content">
     {{ page.content }}
