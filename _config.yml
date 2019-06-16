@@ -35,3 +35,6 @@ exclude:
   - Gemfile.lock
   - CNAME
   - .gitignore
+  - logs
+  - README.md
+  - serve.sh
