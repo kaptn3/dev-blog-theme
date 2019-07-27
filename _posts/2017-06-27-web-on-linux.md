@@ -2,9 +2,10 @@
 layout: post
 title:  "Установки на Linux для Web-разработки. Заметки"
 date:   2017-06-27 16:00
-category: life
+category: administration
 tags: [linux, web-разработка, web, программы]
 image: 9.jpg
+redirect_from: '/life/2017/web-on-linux'
 ---
 <!--more-->
 

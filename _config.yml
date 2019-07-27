@@ -1,13 +1,14 @@
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 title: 'Kapiko - блог о веб-разработке'
 description: >
   "Kapiko - блог о веб-разработке. Здесь можно найти статьи по front-end и back-end разработке, а также администрированию сайтов."
 url: "https://blog.kaptn.ru"
 color: "#6767F6"
-permalink: /:categories/:year/:title
+permalink: /:categories/:title
 
 sass:
   style: compressed
@@ -38,3 +39,4 @@ exclude:
   - logs
   - README.md
   - serve.sh
+  - resize-image.sh

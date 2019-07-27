@@ -3,6 +3,7 @@ layout: post
 title:  "Мой блог. Начало"
 date:   2017-01-31 14:00:00 +0300
 category: life
+redirect_from: '/life/2017/first-post'
 ---
 Пришло время для первого поста. Это так волнительно :)
 
