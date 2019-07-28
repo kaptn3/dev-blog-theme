@@ -9,8 +9,12 @@
       "name": "Codecademy"
     },
     {
-      "link": "/category/javascript",
-      "name": "Javascript"
+      "link": "/category/php",
+      "name": "PHP"
+    },
+    {
+      "link": "administration",
+      "name": "Администрирование"
     }
   ],
   "category": [
@@ -21,6 +25,10 @@
     {
       "link": "codecademy",
       "name": "Codecademy"
+    },
+    {
+      "link": "/category/php",
+      "name": "PHP"
     },
     {
       "link": "administration",
