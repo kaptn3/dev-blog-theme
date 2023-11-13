@@ -10,10 +10,11 @@ export const getSortedPostsData = (): IPost[] => {
       const slug = fileName.replace('.md', '');
       const readFile = fs.readFileSync(`public/posts/${fileName}`, 'utf-8');
       const { data, content } = matter(readFile);
+      const moreIndex = content.indexOf('<!--more-->')
 
       return {
         slug,
-        content: content.slice(0, 100),
+        content: content.slice(0, moreIndex),
         ...data
       };
     })
@@ -31,7 +32,7 @@ export const getPost = (slug: string): IPost | null => {
 
     return {
       ...frontmatter,
-      content
+      content: content.replace("<!--more-->", "")
     };
   } catch (error) {
     console.error(error);
