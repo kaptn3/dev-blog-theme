@@ -13,6 +13,7 @@ export const getSortedPostsData = (): IPost[] => {
 
       return {
         slug,
+        content: content.slice(0, 100),
         ...data
       };
     })
@@ -36,5 +37,29 @@ export const getPost = (slug: string): IPost | null => {
     console.error(error);
 
     return null;
+  }
+}
+
+export const getPostPaths = () => {
+  try {
+    const files = fs.readdirSync('public/posts');
+
+    const paths = files.map((fileName) => ({
+      params: {
+        slug: fileName.replace('.md', '')
+      }
+    }));
+
+    return {
+      paths,
+      fallback: "blocking"
+    };
+  } catch (error) {
+    console.error(error);
+
+    return {
+      paths: [],
+      fallback: false
+    };
   }
 }
