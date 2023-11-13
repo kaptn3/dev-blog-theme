@@ -4,6 +4,6 @@ export default function Home() {
   const allPostsData = getSortedPostsData()
 
   return allPostsData.map((post) => (
-    <div key={post.title}>{post.title}</div>
+    <div key={post.slug}><a href={`/posts/${post.slug}`}>{post.title}</a></div>
   ))
 }

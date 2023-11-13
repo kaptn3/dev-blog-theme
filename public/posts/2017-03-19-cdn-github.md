@@ -1,10 +1,8 @@
 ---
-layout: post
 title:  "Правильное подключение скриптов с GitHub на сайт"
 date:   2017-03-19 14:00:00 +0300
 category: administration
 tags: [github, cdn]
-redirect_from: '/life/2017/cdn-github'
 ---
 Недавно столкнулась с проблемой работы скриптов, находящиеся в репозитории GitHub. Например, если подключить [этот](//github.com/kaptn3/blog/blob/master/assets/js/main.js){:rel="external"} скрипт напрямую, то файл изменится до неузнаваемости и, конечно же, не будет работать. Почему так происходит?
 <!--more-->

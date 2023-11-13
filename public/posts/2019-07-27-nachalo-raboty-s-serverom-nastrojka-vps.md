@@ -1,10 +1,8 @@
 ---
 title: "Начало работы с сервером: настройка VPS"
 category: administration
-layout: post
-image: 12.jpg
 date: 2019-07-27 22:45
-tags: vps, настройка, ubuntu, безопасность, туториал, ssh
+tags: [vps, настройка, ubuntu, безопасность, туториал, ssh]
 description: "Статья посвящена первоначальной настройке доступа и усправления Virtual Private Server под Ubuntu 16.04"
 ---
 

@@ -1,35 +1,40 @@
 import fs from 'fs';
-import path from 'path';
 import matter from 'gray-matter';
+import {IPost} from "@/types";
 
-const postsDirectory = path.join(process.cwd(), 'src/posts');
+export const getSortedPostsData = (): IPost[] => {
+  try {
+    const files = fs.readdirSync('public/posts');
 
-export function getSortedPostsData() {
-  // Get file names under /posts
-  const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = fileNames.map((fileName) => {
-    // Remove ".md" from file name to get id
-    const id = fileName.replace(/\.md$/, '');
+    return files.map((fileName) => {
+      const slug = fileName.replace('.md', '');
+      const readFile = fs.readFileSync(`public/posts/${fileName}`, 'utf-8');
+      const { data, content } = matter(readFile);
 
-    // Read markdown file as string
-    const fullPath = path.join(postsDirectory, fileName);
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
+      return {
+        slug,
+        ...data
+      };
+    })
+  } catch (e) {
+    console.error(e);
 
-    // Use gray-matter to parse the post metadata section
-    const matterResult = matter(fileContents);
+    return []
+  }
+}
 
-    // Combine the data with the id
+export const getPost = (slug: string): IPost | null => {
+  try {
+    const fileName = fs.readFileSync(`public/posts/${slug}.md`, 'utf-8');
+    const { data: frontmatter, content } = matter(fileName);
+
     return {
-      id,
-      ...matterResult.data,
+      ...frontmatter,
+      content
     };
-  });
-  // Sort posts by date
-  return allPostsData.sort((a, b) => {
-    if (a.date < b.date) {
-      return 1;
-    } else {
-      return -1;
-    }
-  });
+  } catch (error) {
+    console.error(error);
+
+    return null;
+  }
 }
