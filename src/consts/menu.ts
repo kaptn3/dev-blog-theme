@@ -1,6 +1,6 @@
 export const MENU = [
   {
-    title: "",
+    title: "GitHub",
     href: "https://github.com/kaptn3",
     target: "_blank"
   },

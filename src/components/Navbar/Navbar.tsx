@@ -4,7 +4,7 @@ export const Navbar = () => {
   return (
     <nav className="pointer-events-auto hidden md:block">
       <ul
-        className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur">
+        className="flex px-3 text-sm font-medium text-zinc-800">
         {MENU.map((item) => (
           <li key={item.title}>
             <a

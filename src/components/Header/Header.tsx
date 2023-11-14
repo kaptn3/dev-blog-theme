@@ -8,7 +8,6 @@ export const Header = () => {
       <Logo />
       <Navbar />
       {/*<NavbarMobile />*/}
-      <div className="flex justify-end md:flex-1" />
     </header>
   );
 };
