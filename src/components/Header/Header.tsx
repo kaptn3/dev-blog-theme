@@ -1,6 +1,5 @@
 import {Navbar} from "@/components/Navbar";
 import {Logo} from "@/components/Logo";
-import {NavbarMobile} from "@/components/NavbarMobile";
 
 export const Header = () => {
   return (

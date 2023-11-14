@@ -15,7 +15,7 @@ export default function Post({ params }) {
       <BackButton />
       <article className="my-16 lg:my-32">
         <header className="flex flex-col">
-          <Time date={post.date} />
+          <Time post={post} />
           <h1 className="mt-6 text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl">{post.title}</h1>
         </header>
         <div

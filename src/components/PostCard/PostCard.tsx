@@ -16,7 +16,7 @@ export const PostCard = ({ post }: PostCardProps) => {
           <span className="relative z-10">{post.title}</span>
         </Link>
       </h2>
-      <Time date={post.date} />
+      <Time post={post} />
       <p className="relative z-10 mt-2 text-sm text-zinc-600">
         {post.content}
       </p>
