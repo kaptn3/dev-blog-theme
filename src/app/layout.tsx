@@ -2,6 +2,7 @@ import "../assets/css/globals.css"
 import React from "react";
 import {Metadata} from "next";
 import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,12 +16,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
-      <body suppressHydrationWarning={true}>
-        <Header />
-        <div className="container w-full md:max-w-3xl mx-auto pt-20">
-          <div className="w-full px-4 md:px-6 text-l text-gray-800 leading-normal">
-            {children}
+      <body suppressHydrationWarning={true} className="h-full flex justify-center bg-zinc-50 lg:px-8">
+        <div className="w-full max-w-6xl bg-white ring-1 ring-zinc-100">
+          <Header />
+          <div className="container w-full md:max-w-3xl mx-auto">
+            <div className="w-full px-4 md:px-6 text-l text-gray-800 leading-normal">
+              {children}
+            </div>
           </div>
+          <Footer />
         </div>
       </body>
     </html>

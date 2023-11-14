@@ -1,6 +1,6 @@
 import {IPost} from "@/types";
 import Link from "next/link";
-import { format } from "date-fns"
+import {Time} from "@/components/Time";
 
 interface PostCardProps {
   post: IPost
@@ -16,12 +16,7 @@ export const PostCard = ({ post }: PostCardProps) => {
           <span className="relative z-10">{post.title}</span>
         </Link>
       </h2>
-      <time className="relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 pl-3.5" dateTime={post.date}>
-        <span className="absolute inset-y-0 left-0 flex items-center" aria-hidden="true">
-          <span className="h-4 w-0.5 rounded-full bg-violet-400"/>
-        </span>
-        {format(new Date(post.date), "dd.MM.yyyy, HH:mm")}
-      </time>
+      <Time date={post.date} />
       <p className="relative z-10 mt-2 text-sm text-zinc-600">
         {post.content}
       </p>
