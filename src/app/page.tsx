@@ -1,6 +1,7 @@
 import {getSortedPostsData} from '@/lib/posts';
 import {Hero} from "@/components/Hero";
 import Link from "next/link";
+import {PostCard} from "@/components/PostCard";
 
 export default function Home() {
   const allPostsData = getSortedPostsData()
@@ -8,12 +9,11 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      {allPostsData.map((post) => (
-        <div key={post.slug}>
-          <Link href={`/posts/${post.slug}`}>{post.title}</Link>
-          <p>{post.content}</p>
-        </div>
-      ))}
+      <div className="flex flex-col gap-16">
+        {allPostsData.map((post) => (
+          <PostCard key={post.slug} post={post} />
+        ))}
+      </div>
     </div>
   )
 }
