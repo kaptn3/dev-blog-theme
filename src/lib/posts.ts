@@ -62,6 +62,6 @@ export const getPostPaths = () => {
   } catch (error) {
     console.error(error);
 
-    return {}
+    return []
   }
 }
