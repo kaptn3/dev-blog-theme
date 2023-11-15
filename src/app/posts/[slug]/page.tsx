@@ -2,7 +2,7 @@ import {getPost, getPostPaths} from "@/lib/posts";
 import md from 'markdown-it';
 import {Time} from "@/components/Time";
 
-export async function getStaticPaths() {
+export async function generateStaticParams() {
   return getPostPaths()
 }
 

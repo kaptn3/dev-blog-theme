@@ -56,22 +56,12 @@ export const getPostPaths = () => {
   try {
     const files = fs.readdirSync(postsPath);
 
-    const paths = files.map((fileName) => ({
-      params: {
-        slug: fileName.replace('.md', '')
-      }
-    }));
-
-    return {
-      paths,
-      fallback: "blocking"
-    };
+    return files.map((fileName) => ({
+      slug: fileName.replace('.md', '')
+    }))
   } catch (error) {
     console.error(error);
 
-    return {
-      paths: [],
-      fallback: false
-    };
+    return {}
   }
 }
