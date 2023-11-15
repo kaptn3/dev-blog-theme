@@ -17,12 +17,10 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body suppressHydrationWarning={true} className="h-full flex justify-center bg-zinc-50 lg:px-8">
-        <div className="w-full max-w-7xl lg:px-8">
-          <div className="bg-white ring-1 ring-zinc-100">
-            <Header />
-            {children}
-            <Footer />
-          </div>
+        <div className="w-full max-w-7xl lg:px-8 bg-white ring-1 ring-zinc-100">
+          <Header />
+          {children}
+          <Footer />
         </div>
       </body>
     </html>
