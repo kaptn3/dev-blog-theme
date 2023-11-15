@@ -6,7 +6,7 @@ export async function generateStaticParams() {
   return getPostPaths()
 }
 
-export default function Post({ params }) {
+export default function Post({ params }: { params: { slug: string }}) {
   const post = getPost(params.slug)
 
   return post ? (

@@ -18,7 +18,10 @@ export const getSortedPostsData = (): IPost[] => {
       return {
         slug,
         content: content.slice(0, moreIndex),
-        ...data
+        tags: data.tags,
+        title: data.title,
+        category: data.category,
+        date: data.date
       };
     })
 
@@ -39,10 +42,14 @@ export const getSortedPostsData = (): IPost[] => {
 export const getPost = (slug: string): IPost | null => {
   try {
     const fileName = fs.readFileSync(`${postsPath}/${slug}.md`, 'utf-8');
-    const { data: frontmatter, content } = matter(fileName);
+    const { data, content } = matter(fileName);
 
     return {
-      ...frontmatter,
+      slug,
+      tags: data.tags,
+      title: data.title,
+      category: data.category,
+      date: data.date,
       content: content.replace(moreTag, "")
     };
   } catch (error) {
