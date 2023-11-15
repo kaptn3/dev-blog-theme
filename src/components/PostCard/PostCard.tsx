@@ -20,7 +20,7 @@ export const PostCard = ({ post }: PostCardProps) => {
       <p className="relative z-10 mt-2 text-sm text-zinc-600">
         {post.content}
       </p>
-      <div className="flex items-center gap-x-2 text-xs mt-3">
+      <div className="flex items-center gap-x-2 text-xs mt-3 flex-wrap">
         {(post.tags ?? []).map((tag) => (
           <a key={tag} className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600" href="#">
             {tag}
