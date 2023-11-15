@@ -1,6 +1,5 @@
 import {getSortedPostsData} from '@/lib/posts';
 import {Hero} from "@/components/Hero";
-import Link from "next/link";
 import {PostCard} from "@/components/PostCard";
 
 export default function Home() {
