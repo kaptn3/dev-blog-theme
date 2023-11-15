@@ -9,7 +9,7 @@ interface PostCardProps {
 export const PostCard = ({ post }: PostCardProps) => {
   return (
     <article className="group relative flex flex-col items-start">
-      <h2 className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
+      <h2 className="text-base font-semibold tracking-tight text-zinc-800">
         <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-violet-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl" />
         <Link href={`/posts/${post.slug}`}>
           <span className="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl" />

@@ -4,7 +4,7 @@ export const Footer = () => {
   return (
     <footer className="border-t border-zinc-100 py-10 px-4">
       <div className="mx-auto max-w-2xl lg:max-w-5xl flex justify-between">
-        <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-800 dark:text-zinc-200">
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-800">
           {MENU.map((item) => (
             <a
               key={item.title}
