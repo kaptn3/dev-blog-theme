@@ -11,7 +11,9 @@ export default function Post({ params }) {
   const post = getPost(params.slug)
 
   return post ? (
-    <div>
+
+    <div className="mx-auto max-w-2xl lg:max-w-5xl xl:relative px-4">
+      <div className="mx-auto max-w-2xl">
       <BackButton />
       <article className="my-16 lg:my-32">
         <header className="flex flex-col">
@@ -24,6 +26,7 @@ export default function Post({ params }) {
           dangerouslySetInnerHTML={{ __html: md().render(post.content) }}
         />
       </article>
+    </div>
     </div>
   ) : null
 }

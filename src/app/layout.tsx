@@ -20,11 +20,7 @@ export default function RootLayout({
         <div className="w-full max-w-7xl lg:px-8">
           <div className="bg-white ring-1 ring-zinc-100">
             <Header />
-            <div className="mx-auto max-w-2xl lg:max-w-5xl xl:relative px-4">
-              <div className="mx-auto max-w-2xl">
-                {children}
-              </div>
-            </div>
+            {children}
             <Footer />
           </div>
         </div>
