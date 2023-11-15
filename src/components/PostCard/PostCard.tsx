@@ -20,11 +20,13 @@ export const PostCard = ({ post }: PostCardProps) => {
       <p className="relative z-10 mt-2 text-sm text-zinc-600">
         {post.content}
       </p>
-      <div aria-hidden="true" className="relative z-10 mt-4 flex items-center text-sm font-medium" style={{ color: "#9089fc" }}>
-        Читать далее
-        <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" className="ml-1 h-4 w-4 stroke-current">
-          <path d="M6.75 5.75 9.25 8l-2.5 2.25" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
+      <div className="flex items-center gap-x-2 text-xs mt-3">
+        {(post.tags ?? []).map((tag) => (
+          <a key={tag} className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600" href="#">
+            {tag}
+          </a>
+          ))
+        }
       </div>
     </article>
   );

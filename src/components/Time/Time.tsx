@@ -14,9 +14,6 @@ export const Time = ({ post }: TimeProps) => {
       <time className="text-zinc-400 pl-3.5" dateTime={post.date}>
         {format(new Date(post.date), "dd.MM.yyyy, HH:mm")}
       </time>
-      <a className="relative z-10 rounded-full bg-gray-50 text-gray-600 px-3 py-1" href="#">
-        {post.category}
-      </a>
     </div>
   );
 };
