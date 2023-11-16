@@ -1,6 +1,6 @@
 import {getPost, getPostPaths} from "@/lib/posts";
-import md from 'markdown-it';
 import {Time} from "@/components/Time";
+import {renderMd} from "@/lib/renderMd";
 
 export async function generateStaticParams() {
   return getPostPaths()
@@ -19,7 +19,7 @@ export default function Post({ params }: { params: { slug: string }}) {
         <div
           className="mt-8 prose"
           data-mdx-content="true"
-          dangerouslySetInnerHTML={{ __html: md().render(post.content) }}
+          dangerouslySetInnerHTML={{ __html: renderMd(post.content) }}
         />
       </article>
     </div>
